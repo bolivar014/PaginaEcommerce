@@ -28,6 +28,5 @@ Route::post('/products/store', 'ProductsController@store');
 
 Route::get('/products/{id}/edit','ProductsController@edit');
 Route::post('/products/{id}/store','ProductsController@store');
-
-
 Route::get('/products/{id}/destroy','ProductsController@destroy');
+Route::get('/products/{id}/show','ProductsController@show');

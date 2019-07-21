@@ -70,6 +70,9 @@ class ProductsController extends Controller
     public function show($id)
     {
         //
+           //
+           $product = Product::find($id);
+           return view('products.show')->with(compact('product'));
     }
 
     /**
@@ -126,7 +129,7 @@ class ProductsController extends Controller
         $product = Product::find($id);
 
         $product->delete();
-        
+
         return redirect('/products');
     }
 }

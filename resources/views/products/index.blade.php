@@ -25,6 +25,7 @@
                             <td>
                                 <a href="{{ url('/products/'.$product->id.'/edit')}}" class="btn btn-info">Editar</a>
                                 <a href="{{ url('/products/'.$product->id.'/destroy')}}" class="btn btn-danger">Eliminar</a>
+                                <a href="{{ url('/products/'.$product->id.'/show')}}" class="btn btn-success">Vér</a>
                             </td>
                         </tr>
                     @endforeach
