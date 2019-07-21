@@ -309,9 +309,16 @@
 	$mytime = Carbon::now('America/Bogota'); 
 	adicional se agrega  en la cabecera...
 		use Carbon\Carbon;
-[*] 
+
+[*] Herramienta que nos permite asignar flujo de tareas en Css. para convertirlo a datos finales para el proyecto
+    npm install -g gulp
+    npm run watch
 	
-[*] 
+[*] Verbos Http
+    POST = Crear
+    GET  = Mostrar
+    PUT / PATCH = Actualizar
+    DELETE = Eliminar
 	
 [*] 
 	
