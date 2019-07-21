@@ -21,8 +21,8 @@
 
 
 [*] Creación de los controladores de Rutas. 
-	php artisan make:controller [NombreController]
-	php artisan make:controller PagesController
+	php artisan make:controller [NombreController] --resource
+	php artisan make:controller PagesController --resource
 
 [*] Creación de Layouts.
 	1) Creamos una carpeta con el nombre de "layouts"
@@ -320,8 +320,20 @@
     PUT / PATCH = Actualizar
     DELETE = Eliminar
 	
-[*] 
-	
+[*] Para utilizar nuevas dependencias de html forms... agregamos en require de composer.json
+	"laravelcollective/html": "5.3.*@dev"
+
+		adicional, en la terminal actualizamos repositorios con
+		composer update
+
+		también agregamos en Config/App
+		/*
+		* Package Service Providers...
+		*/
+        Collective\Html\HtmlServiceProvider::class,
+		también agregamos en los alias...
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 [*] 
 	
 [*] 
