@@ -3,7 +3,7 @@
         <div class="container ">
             <h1>Nuevo Producto</h1>
             <!-- -->
-            <form action="{{ url('/products/store') }}" method="post">
+            <form action="{{ url('/products') }}" method="post">
                 <div class="form-group">
                     <label for="">Título</label>
                     <input type="text" class="form-control" id="title" name="title" placeholder="Digite el titulo...">

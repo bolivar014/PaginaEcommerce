@@ -42,23 +42,21 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         //
-        $product = new Product;
+        $product = new Product();
 
         $product->title = $request->input('title');
         $product->description = $request->input('description');
         $product->pricing = $request->input('pricing');
         $product->user_id = Auth::user()->id;
-        // dd($products);
+        // dd($product);
         if($product->save())
         {
             return redirect('/products');
         }
         else
         {
-            return view('products.create');
-        }
-
-        return back();
+            return redirect('products.create');
+        }   
     }
 
     /**
@@ -83,7 +81,6 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
         $product = Product::find($id);
         return view('products.edit')->with(compact('product'));
     }
@@ -97,9 +94,7 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
         $product = Product::find($id);
-
         $product->title = $request->input('title');
         $product->description = $request->input('description');
         $product->pricing = $request->input('pricing');
@@ -111,7 +106,7 @@ class ProductsController extends Controller
         }
         else
         {
-            return view('products.edit');
+            return redirect('products.edit');
         }
         
 
